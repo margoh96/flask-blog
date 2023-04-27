@@ -10,7 +10,7 @@ from flask_login import UserMixin, login_user, LoginManager, login_required, cur
 from forms import CreatePostForm, RegisterUserForm, LoginUserForm, CommentForm
 from flask_gravatar import Gravatar
 from functools import wraps
-import os
+# import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
@@ -242,5 +242,5 @@ def delete_post(post_id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=os.getenv("PORT", default=5000))
-    app.run(host='0.0.0.0', port=5000)
+#     app.run(debug=True, port=os.getenv("PORT", default=5000))
+    app.run(port=5000)
